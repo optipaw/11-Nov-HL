@@ -1,0 +1,26 @@
+{
+  "Name": "Main",
+  "Description": "",
+  "Maintainer": "Customer",
+  "Icon": "PHN2ZyB3aWR0aD0iMzMiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMyAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI0LjU3NzMgNi45OTgwNUg4LjU3NzMxQzcuMTA0NTUgNi45OTgwNSA1LjkxMDY0IDguMTkyNDggNS45MTA2NCA5LjY2NTg4VjIwLjAwNkM1LjkxMDY0IDIxLjQ3OTQgNy4xMDQ1NSAyMi42NzM4IDguNTc3MzEgMjIuNjczOEgxMC45NjYxVjI2LjEwNzJDMTAuOTY2MSAyNi44MzA1IDExLjc4MzIgMjcuMjUxMiAxMi4zNzE1IDI2LjgzMDlMMTguMTkwNSAyMi42NzM4SDI0LjU3NzNDMjYuMDUwMSAyMi42NzM4IDI3LjI0NCAyMS40Nzk0IDI3LjI0NCAyMC4wMDZWOS42NjU4OEMyNy4yNDQgOC4xOTI0OCAyNi4wNTAxIDYuOTk4MDUgMjQuNTc3MyA2Ljk5ODA1WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==",
+  "IconName": "SectionIcon_Chats.svg",
+  "Color": "#FF8800",
+  "Version": "1.0.0",
+  "RequiredPlatformVersion": "10.0.0",
+  "MarketplaceLink": "",
+  "DependsOn": [
+    {
+      "Type": 0,
+      "Code": "CrtCustomer360App",
+      "Name": "Customer 360",
+      "Version": "1.15.10"
+    }
+  ],
+  "Code": "UsrMain",
+  "Packages": [
+    {
+      "UId": "d8f271b7-34c4-49aa-b758-9b22a042190f",
+      "Name": "UsrMain"
+    }
+  ]
+}
