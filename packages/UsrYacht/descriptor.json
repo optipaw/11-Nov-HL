@@ -9,6 +9,12 @@
     "Description": "#OriginalMaintainer:Customer",
     "DependsOn": [
       {
+        "UId": "012e2e14-082b-ac2b-da5a-2fc87bad41d4",
+        "PackageVersion": "7.8.0",
+        "Name": "CrtCore",
+        "Type": 1
+      },
+      {
         "UId": "d8f271b7-34c4-49aa-b758-9b22a042190f",
         "Name": "UsrMain",
         "Type": 1,

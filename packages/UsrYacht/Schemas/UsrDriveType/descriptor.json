@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "112508a2-457a-4d5f-aa9e-1120d24832e5",
+    "Name": "UsrDriveType",
+    "ModifiedOnUtc": "\/Date(1794832141000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Drive types",
+    "DependsOn": []
+  }
+}
