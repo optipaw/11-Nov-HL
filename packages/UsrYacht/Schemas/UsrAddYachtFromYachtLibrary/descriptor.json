@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "f2262a85-b970-428c-9c6c-58df513fd9ea",
+    "Name": "UsrAddYachtFromYachtLibrary",
+    "ModifiedOnUtc": "\/Date(1795167498000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Add yacht from Yacht service"
+  }
+}

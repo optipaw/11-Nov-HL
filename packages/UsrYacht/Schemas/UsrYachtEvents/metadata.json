@@ -1,0 +1,31 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "SourceCodeSchemaManager",
+      "UId": "13419d9b-d1fe-4191-a21f-6be632e4f25c",
+      "A2": "UsrYachtEvents",
+      "A5": "569fbe19-d9b2-4eee-a024-063eda49f3f6",
+      "B1": [],
+      "B2": [
+        {
+          "UId": "ca9930f6-d079-9fb2-36f9-9975f1f93282",
+          "A2": "ValueIsTooBig",
+          "A3": "13419d9b-d1fe-4191-a21f-6be632e4f25c",
+          "A4": "13419d9b-d1fe-4191-a21f-6be632e4f25c",
+          "A5": "569fbe19-d9b2-4eee-a024-063eda49f3f6"
+        },
+        {
+          "UId": "aab232da-6d0e-c9eb-e9dd-b48828be5928",
+          "A2": "ValueIsTooShort",
+          "A3": "13419d9b-d1fe-4191-a21f-6be632e4f25c",
+          "A4": "13419d9b-d1fe-4191-a21f-6be632e4f25c",
+          "A5": "569fbe19-d9b2-4eee-a024-063eda49f3f6"
+        }
+      ],
+      "B3": [],
+      "B6": "3ddd7acc-98d7-42c5-ac6d-d06ae4b03088",
+      "B8": "10.0.0.801",
+      "HD1": "50e3acc0-26fc-4237-a095-849a1d534bd3"
+    }
+  }
+}

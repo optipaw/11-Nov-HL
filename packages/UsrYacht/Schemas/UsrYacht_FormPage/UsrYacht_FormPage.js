@@ -1,4 +1,4 @@
-define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/()/**SCHEMA_ARGS*/ {
+define("UsrYacht_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/(sdk)/**SCHEMA_ARGS*/ {
 	return {
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
@@ -37,6 +37,84 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 						}
 					]
 				}
+			},
+			{
+				"operation": "insert",
+				"name": "Button_kb0jjbe",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_kb0jjbe_caption)#",
+					"color": "default",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "left-icon",
+					"visible": true,
+					"menuItems": [],
+					"clickMode": "menu",
+					"icon": "actions-button-icon"
+				},
+				"parentName": "ActionButtonsContainer",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "MenuItem_dtddu0m",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(MenuItem_dtddu0m_caption)#",
+					"visible": true,
+					"clicked": {
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "UsrYachtAvgTickPrice",
+							"processRunType": "ForTheSelectedPage",
+							"saveAtProcessStart": true,
+							"showNotification": true,
+							"recordIdProcessParameterName": "YachtId"
+						}
+					}
+				},
+				"parentName": "Button_kb0jjbe",
+				"propertyName": "menuItems",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "MenuItem_YachtService",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(MenuItem_YachtService_caption)#",
+					"visible": true,
+					"icon": "process-button-icon",
+					"clicked": {
+						"request": "usr.RunWebServiceRequest"
+					}
+				},
+				"parentName": "Button_kb0jjbe",
+				"propertyName": "menuItems",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "PushMeButton",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(PushMeButton_caption)#",
+					"color": "outline",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "left-icon",
+					"visible": true,
+					"icon": "copilot-rewrite-friendly-icon",
+					"clicked": {
+						"request": "usr.PushButtonRequest"
+					},
+					"clickMode": "default"
+				},
+				"parentName": "ActionButtonsContainer",
+				"propertyName": "items",
+				"index": 1
 			},
 			{
 				"operation": "insert",
@@ -126,6 +204,53 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 				"parentName": "SideAreaProfileContainer",
 				"propertyName": "items",
 				"index": 3
+			},
+			{
+				"operation": "insert",
+				"name": "TicketPrice",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"colSpan": 1,
+						"row": 5,
+						"rowSpan": 1
+					},
+					"type": "crt.NumberInput",
+					"label": "$Resources.Strings.PDS_UsrTicketPrice_pz9v3lp",
+					"control": "$PDS_UsrTicketPrice_pz9v3lp",
+					"readonly": false,
+					"placeholder": "",
+					"labelPosition": "auto",
+					"tooltip": "",
+					"visible": false
+				},
+				"parentName": "SideAreaProfileContainer",
+				"propertyName": "items",
+				"index": 4
+			},
+			{
+				"operation": "insert",
+				"name": "CaptainEmail",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"colSpan": 1,
+						"row": 6,
+						"rowSpan": 1
+					},
+					"type": "crt.EmailInput",
+					"label": "$Resources.Strings.PDS_UsrCaptainEmail_y4t9dmb",
+					"control": "$PDS_UsrCaptainEmail_y4t9dmb",
+					"labelPosition": "auto",
+					"placeholder": "",
+					"tooltip": "",
+					"needHandleSave": false,
+					"visible": true,
+					"readonly": true
+				},
+				"parentName": "SideAreaProfileContainer",
+				"propertyName": "items",
+				"index": 5
 			},
 			{
 				"operation": "insert",
@@ -399,6 +524,15 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 					"PDS_UsrPrice_smkjrx8": {
 						"modelConfig": {
 							"path": "PDS.UsrPrice"
+						},
+						"validators": {
+							"MySuperValidator": {
+								"type": "usr.YTValidator",
+								"params": {
+									"settingCode": "UsrYachtMinPrice",
+									"message": "#ResourceString(PriceCannotBeLess)#"
+								}
+							}
 						}
 					},
 					"PDS_UsrImage_m289qyq": {
@@ -409,6 +543,15 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 					"PDS_UsrLength_m1i6sra": {
 						"modelConfig": {
 							"path": "PDS.UsrLength"
+						},
+						"validators": {
+							"MySuperValidator": {
+								"type": "usr.YTValidator",
+								"params": {
+									"settingCode": "UsrYachtMinLength",
+									"message": "#ResourceString(LengthCannotBeLess)#"
+								}
+							}
 						}
 					},
 					"PDS_UsrCaptain_a5rjs3r": {
@@ -510,6 +653,16 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 					},
 					"Categories_List_Items_Predefined_Filter": {
 						"value": null
+					},
+					"PDS_UsrTicketPrice_pz9v3lp": {
+						"modelConfig": {
+							"path": "PDS.UsrTicketPrice"
+						}
+					},
+					"PDS_UsrCaptainEmail_y4t9dmb": {
+						"modelConfig": {
+							"path": "PDS.UsrCaptainEmail_y4t9dmb"
+						}
 					}
 				}
 			},
@@ -547,6 +700,10 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 								"UsrStatusDescription": {
 									"path": "UsrStatus.Description",
 									"type": "ForwardReference"
+								},
+								"UsrCaptainEmail_y4t9dmb": {
+									"path": "UsrCaptain.Email",
+									"type": "ForwardReference"
 								}
 							}
 						},
@@ -555,8 +712,105 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 				}
 			}
 		]/**SCHEMA_MODEL_CONFIG_DIFF*/,
-		handlers: /**SCHEMA_HANDLERS*/[]/**SCHEMA_HANDLERS*/,
+		handlers: /**SCHEMA_HANDLERS*/[
+		        {
+                request: "usr.PushButtonRequest",
+                /* Implementation of the custom query handler. */
+                handler: async (request, next) => {
+                    console.log("Button works...");
+                    Terrasoft.showInformation("My button was pressed.");
+                    var price = await request.$context.PDS_UsrPrice_smkjrx8;
+                    console.log("Price = " + price);
+                    request.$context.PDS_UsrComment_js14kvz = "comment from JS code!";
+                    /* Call the next handler if it exists and return its result. */
+                    return next?.handle(request);
+                }
+            },
+
+			    {
+                request: "crt.HandleViewModelAttributeChangeRequest",
+                /* The custom implementation of the system query handler. */
+                handler: async (request, next) => {
+                     if (request.attributeName === 'PDS_UsrPrice_smkjrx8' ||                 // if price changed
+                       request.attributeName === 'PDS_UsrPassengerCount_btmb6e0' ) {         // or Passenger count changed
+						debugger;
+                        let price = await request.$context.PDS_UsrPrice_smkjrx8;
+                        let passengers = await request.$context.PDS_UsrPassengerCount_btmb6e0;
+                        let ticket_price = price / passengers;
+                        request.$context.PDS_UsrTicketPrice_pz9v3lp = ticket_price;
+                    }
+                    /* Call the next handler if it exists and return its result. */
+                    return next?.handle(request);
+                }
+            },
+
+			{
+                request: "usr.RunWebServiceRequest",
+                /* Implementation of the custom query handler. */
+                handler: async (request, next) => {
+                    console.log("Run web service button works...");
+                    
+                    // get id from drive type lookup type object
+                    var typeObject = await request.$context.PDS_UsrDriveType_0irish8;
+                    var driveTypeId = "";
+                    if (typeObject) {
+                        driveTypeId = typeObject.value;
+                    }
+                    /* Create an instance of the HTTP client from @creatio-devkit/common. */
+                    const httpClientService = new sdk.HttpClientService();
+                    /* Specify the URL to run web service method. */
+                    const baseUrl = Terrasoft.utils.uri.getConfigurationWebServiceBaseUrl();
+                    const transferName = "rest";
+                    const serviceName = "YachtService";
+                    const methodName = "GetMaxPriceByDriveTypeId";
+                    const endpoint = Terrasoft.combinePath(baseUrl, transferName, serviceName, methodName);
+                    
+                    //const endpoint = "http://y-todosan-nb.tscrm.com:40003/0/rest/YachtService/GetMaxPriceByDriveTypeId";
+                    /* Send a POST HTTP request. The HTTP client converts the response body from JSON to a JS object automatically. */
+                    var params = {
+                        driveTypeId: driveTypeId
+                    };
+                    const response = await httpClientService.post(endpoint, params);
+                    
+                    console.log("response max price = " + response.body.GetMaxPriceByDriveTypeIdResult);
+                    
+                    /* Call the next handler if it exists and return its result. */
+                    return next?.handle(request);
+                }
+            }
+		]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
-		validators: /**SCHEMA_VALIDATORS*/{}/**SCHEMA_VALIDATORS*/
+		validators: /**SCHEMA_VALIDATORS*/{
+			"usr.YTValidator": {
+                validator: function (config) {
+                    return async function (control) {
+                        let value = control.value;
+                        let setting = await new sdk.SysSettingsService().getByCode(config.settingCode);
+                        let minValue = setting.value;
+                        let valueIsCorrect = value >= minValue;
+                        var result;
+                        if (valueIsCorrect) {
+                            result = null;
+                        } else {
+                            result = {
+                                "usr.YTValidator": {
+                                    message: config.message
+                                }
+                            };
+                        }
+                        return result;
+                    };
+                },
+                params: [
+                    {
+                        name: "settingCode"
+                    },
+                    {
+                        name: "message"
+                    }
+                ],
+                async: true
+            }
+		}/**SCHEMA_VALIDATORS*/
 	};
 });

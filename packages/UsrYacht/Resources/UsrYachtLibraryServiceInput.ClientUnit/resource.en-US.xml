@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Yacht library input" />
+			<Item Name="LocalizableStrings.PageTitle_caption.Value" Value="Enter yachts details" />
+			<Item Name="LocalizableStrings.SaveButton_caption.Value" Value="OK" />
+			<Item Name="LocalizableStrings.addRecord_e1d1akg_caption.Value" Value="Add new" />
+			<Item Name="Parameters.16aab627-68ba-d407-bb23-8e153520a689.Caption" Value="Passenger count" />
+			<Item Name="Parameters.2492d314-8eea-9d60-92aa-620dd6200ccf.Caption" Value="Drive type" />
+		</Items>
+	</Group>
+</Resources>
