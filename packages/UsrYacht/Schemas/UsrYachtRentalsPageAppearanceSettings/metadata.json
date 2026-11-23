@@ -1,0 +1,24 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "AddonSchemaManager",
+      "UId": "a415ffe0-db40-4ad1-995f-e24358e58e8c",
+      "A2": "UsrYachtRentalsPageAppearanceSettings",
+      "A5": "569fbe19-d9b2-4eee-a024-063eda49f3f6",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "3ddd7acc-98d7-42c5-ac6d-d06ae4b03088",
+      "B8": "10.0.0.801",
+      "AD1": "84d9c697-1f6a-4eb6-aea4-9f064dcb2dae",
+      "AD2": "ClientUnitSchemaManager",
+      "AD3": "AppearanceSettings",
+      "AD5": "3a2d6f51-1bfc-4c17-aacb-b53de4866b7c",
+      "AD4": {
+  "modalSettings": {
+    "size": 2
+  }
+}
+    }
+  }
+}

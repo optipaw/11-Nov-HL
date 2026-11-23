@@ -3,6 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="AddonConfig.Rules.9a54bc29-b165-1dc5-28e1-d000193f051d.Caption" Value="Show elements: Ticket price" />
+			<Item Name="AddonConfig.Rules.b579951b-a3f5-2f49-602a-f4eafd3099e6.Caption" Value="Make elements required: Comment" />
 			<Item Name="Caption" Value="Yachts form page (Business rules)" />
 		</Items>
 	</Group>

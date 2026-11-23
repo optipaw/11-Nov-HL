@@ -3,6 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Yacht events" />
+			<Item Name="LocalizableStrings.LenghtIsTooBig.Value" Value="A yacht is too long" />
 			<Item Name="LocalizableStrings.ValueIsTooBig.Value" Value="A yacht should never cost more than 100 000" />
 			<Item Name="LocalizableStrings.ValueIsTooShort.Value" Value="A yacht should never cost below 600" />
 		</Items>

@@ -4,6 +4,7 @@
     "Name": "UsrCallYachtLibrary",
     "ModifiedOnUtc": "\/Date(1795167525000)\/",
     "ManagerName": "ProcessSchemaManager",
-    "Caption": "Call yacht library service"
+    "Caption": "Call yacht library service",
+    "DependsOn": []
   }
 }

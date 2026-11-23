@@ -1,0 +1,190 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ServiceSchemaManager",
+      "UId": "cc0380c3-4149-46e7-80d5-65d88df745a8",
+      "A2": "UsrService_YachtLibrary",
+      "A5": "569fbe19-d9b2-4eee-a024-063eda49f3f6",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "3ddd7acc-98d7-42c5-ac6d-d06ae4b03088",
+      "B8": "10.0.0.801",
+      "IQ1": "https://yachts-api.y-todosan.workers.dev",
+      "IQ2": 1,
+      "IQ3": 3,
+      "IQ7": [],
+      "IQ4": [
+        {
+          "UId": "fb6ddc76-8086-4805-bfc8-f479965144a9",
+          "A2": "UsrReturnYachtCollection",
+          "A3": "cc0380c3-4149-46e7-80d5-65d88df745a8",
+          "A4": "cc0380c3-4149-46e7-80d5-65d88df745a8",
+          "IR3": 5000,
+          "IR5": "null",
+          "IR1": {
+            "IW2": 1,
+            "IW1": [
+              {
+                "UId": "abd540ec-ef3e-4ecb-b7c1-14e5745d6819",
+                "A2": "UsrDType",
+                "IU1": "$.driveType",
+                "IU2": "Text",
+                "IU8": "item",
+                "IU4": 1,
+                "IU5": {
+                  "IV1": "null"
+                },
+                "IU6": []
+              },
+              {
+                "UId": "f95482a5-13fa-4eb3-8823-210bb79ca760",
+                "A2": "UsrMPCount",
+                "IU1": "$.minPassengerCount",
+                "IU2": "Integer",
+                "IU8": "item",
+                "IU4": 1,
+                "IU5": {
+                  "IV1": "1",
+                  "IV2": 1
+                },
+                "IU6": []
+              },
+              {
+                "UId": "d57b347e-2a52-471d-9ec9-eab7491fea88",
+                "A2": "UsrMPCount1",
+                "IU1": "$.maxPassengerCount",
+                "IU2": "Integer",
+                "IU8": "item",
+                "IU4": 1,
+                "IU5": {
+                  "IV1": "null"
+                },
+                "IU6": []
+              },
+              {
+                "UId": "0a735a40-f1e9-46bf-844f-ef9966f872fd",
+                "A2": "UsrSort",
+                "IU1": "$.sort",
+                "IU2": "Text",
+                "IU8": "item",
+                "IU4": 1,
+                "IU5": {
+                  "IV1": "name",
+                  "IV2": 1
+                },
+                "IU6": []
+              },
+              {
+                "UId": "dd72961d-1cb2-4361-9112-0894a42df70a",
+                "A2": "UsrOrder",
+                "IU1": "$.order",
+                "IU2": "Text",
+                "IU8": "item",
+                "IU4": 1,
+                "IU5": {
+                  "IV1": "asc",
+                  "IV2": 1
+                },
+                "IU6": []
+              }
+            ],
+            "IT2": 2,
+            "IT1": "/yachts"
+          },
+          "IR2": {
+            "IW2": 1,
+            "IW1": [
+              {
+                "UId": "b4f2e167-da4c-4d09-aeed-303f7b2b3800",
+                "A2": "UsrParameter",
+                "IU1": "$",
+                "IU2": "Object",
+                "IU3": true,
+                "IU8": "item",
+                "IU4": 1,
+                "IU5": {
+                  "IV1": "null"
+                },
+                "IU6": [
+                  {
+                    "UId": "bf248d8e-95d9-4d99-9094-af77120d72bc",
+                    "A2": "UsrName",
+                    "IU1": "name",
+                    "IU2": "Text",
+                    "IU8": "item",
+                    "IU4": 1,
+                    "IU5": {
+                      "IV1": "null"
+                    },
+                    "IU6": []
+                  },
+                  {
+                    "UId": "f970352b-7a0c-48ad-93e0-5edcf5483f5f",
+                    "A2": "UsrDType",
+                    "IU1": "driveType",
+                    "IU2": "Text",
+                    "IU8": "item",
+                    "IU4": 1,
+                    "IU5": {
+                      "IV1": "null"
+                    },
+                    "IU6": []
+                  },
+                  {
+                    "UId": "5c455f31-13af-4468-9ea2-a8ee5c3b441f",
+                    "A2": "UsrLFt",
+                    "IU1": "lengthFt",
+                    "IU2": "Integer",
+                    "IU8": "item",
+                    "IU4": 1,
+                    "IU5": {
+                      "IV1": "null"
+                    },
+                    "IU6": []
+                  },
+                  {
+                    "UId": "96e6737b-facc-4250-a98f-5da470884d2c",
+                    "A2": "UsrPCount",
+                    "IU1": "passengerCount",
+                    "IU2": "Integer",
+                    "IU8": "item",
+                    "IU4": 1,
+                    "IU5": {
+                      "IV1": "null"
+                    },
+                    "IU6": []
+                  },
+                  {
+                    "UId": "1c1375b3-3ae3-4806-96ae-c62aa5666df8",
+                    "A2": "UsrCCount",
+                    "IU1": "crewCount",
+                    "IU2": "Integer",
+                    "IU8": "item",
+                    "IU4": 1,
+                    "IU5": {
+                      "IV1": "null"
+                    },
+                    "IU6": []
+                  },
+                  {
+                    "UId": "258f2f25-6a16-4d94-8e57-600639198602",
+                    "A2": "UsrPPDay",
+                    "IU1": "pricePerDay",
+                    "IU2": "Integer",
+                    "IU8": "item",
+                    "IU4": 1,
+                    "IU5": {
+                      "IV1": "null"
+                    },
+                    "IU6": []
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

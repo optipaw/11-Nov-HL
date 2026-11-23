@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Yacht library" />
+			<Item Name="ServiceMethods.UsrReturnYachtCollection.Caption" Value="Return yacht collection" />
+			<Item Name="ServiceMethods.UsrReturnYachtCollection.Request.Parameters.UsrDType.Caption" Value="DriveType" />
+			<Item Name="ServiceMethods.UsrReturnYachtCollection.Request.Parameters.UsrMPCount.Caption" Value="MinPassengerCount" />
+			<Item Name="ServiceMethods.UsrReturnYachtCollection.Request.Parameters.UsrMPCount1.Caption" Value="MaxPassengerCount" />
+			<Item Name="ServiceMethods.UsrReturnYachtCollection.Request.Parameters.UsrOrder.Caption" Value="Order" />
+			<Item Name="ServiceMethods.UsrReturnYachtCollection.Request.Parameters.UsrSort.Caption" Value="Sort" />
+			<Item Name="ServiceMethods.UsrReturnYachtCollection.Response.Parameters.UsrParameter.Caption" Value="Parameter" />
+			<Item Name="ServiceMethods.UsrReturnYachtCollection.Response.Parameters.UsrParameter.ItemProperties.UsrCCount.Caption" Value="CrewCount" />
+			<Item Name="ServiceMethods.UsrReturnYachtCollection.Response.Parameters.UsrParameter.ItemProperties.UsrDType.Caption" Value="DriveType" />
+			<Item Name="ServiceMethods.UsrReturnYachtCollection.Response.Parameters.UsrParameter.ItemProperties.UsrLFt.Caption" Value="LengthFt" />
+			<Item Name="ServiceMethods.UsrReturnYachtCollection.Response.Parameters.UsrParameter.ItemProperties.UsrName.Caption" Value="Name" />
+			<Item Name="ServiceMethods.UsrReturnYachtCollection.Response.Parameters.UsrParameter.ItemProperties.UsrPCount.Caption" Value="PassengerCount" />
+			<Item Name="ServiceMethods.UsrReturnYachtCollection.Response.Parameters.UsrParameter.ItemProperties.UsrPPDay.Caption" Value="PricePerDay" />
+		</Items>
+	</Group>
+</Resources>

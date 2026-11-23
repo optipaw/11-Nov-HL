@@ -6,11 +6,21 @@
 			<Item Name="LocalizableStrings.Button_kb0jjbe_caption.Value" Value="Actions" />
 			<Item Name="LocalizableStrings.Categories_label.Value" Value="Categories" />
 			<Item Name="LocalizableStrings.EmailInput_gadtp8h_label.Value" Value="Cap's email" />
+			<Item Name="LocalizableStrings.ExpansionPanel_YachtRentals_title.Value" Value="Yacht rentals" />
+			<Item Name="LocalizableStrings.GridDetailAddBtn_mbsdbky_caption.Value" Value="New" />
+			<Item Name="LocalizableStrings.GridDetailExportDataBtn_avv90kx_caption.Value" Value="Export to Excel" />
+			<Item Name="LocalizableStrings.GridDetailImportDataBtn_9fxy958_caption.Value" Value="Data import" />
+			<Item Name="LocalizableStrings.GridDetailRefreshBtn_hlv8nij_caption.Value" Value="Refresh" />
+			<Item Name="LocalizableStrings.GridDetailSearchFilter_t7yihnk_placeholder.Value" Value="Search" />
+			<Item Name="LocalizableStrings.GridDetailSettingsBtn_fgh5bcb_caption.Value" Value="Actions" />
 			<Item Name="LocalizableStrings.LengthCannotBeLess.Value" Value="This yacht is too short" />
+			<Item Name="LocalizableStrings.LengthCannotBeMore.Value" Value="A yacht cannot be longer than 5000ft" />
 			<Item Name="LocalizableStrings.MenuItem_YachtService_caption.Value" Value="Yacht service" />
 			<Item Name="LocalizableStrings.MenuItem_dtddu0m_caption.Value" Value="Average yacht ticket price" />
 			<Item Name="LocalizableStrings.PriceCannotBeLess.Value" Value="Price is too low" />
+			<Item Name="LocalizableStrings.PriceCannotBeMore.Value" Value="The price cannot be more than 100000" />
 			<Item Name="LocalizableStrings.PushMeButton_caption.Value" Value="Push me" />
+			<Item Name="LocalizableStrings.TabContainer_Rentals_caption.Value" Value="Rentals" />
 			<Item Name="LocalizableStrings.addRecord_1a7osh0_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_c3tk1vd_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_n2izem2_caption.Value" Value="Add new" />

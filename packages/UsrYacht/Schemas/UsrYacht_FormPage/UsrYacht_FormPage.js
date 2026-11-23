@@ -17,6 +17,33 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_
 			},
 			{
 				"operation": "merge",
+				"name": "GeneralInfoTab",
+				"values": {
+					"iconPosition": "only-text"
+				}
+			},
+			{
+				"operation": "merge",
+				"name": "GeneralInfoTabContainer",
+				"values": {
+					"gap": {
+						"columnGap": "large",
+						"rowGap": "none"
+					},
+					"visible": true,
+					"padding": {
+						"top": "none",
+						"right": "none",
+						"bottom": "none",
+						"left": "none"
+					},
+					"color": "transparent",
+					"borderRadius": "none",
+					"alignItems": "stretch"
+				}
+			},
+			{
+				"operation": "merge",
 				"name": "Feed",
 				"values": {
 					"dataSourceName": "PDS",
@@ -452,7 +479,7 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_
 					"placeholder": "",
 					"tooltip": "",
 					"readonly": false,
-					"multiline": true,
+					"multiline": false,
 					"labelPosition": "auto",
 					"visible": true
 				},
@@ -507,6 +534,459 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_
 				"parentName": "GeneralInfoTab",
 				"propertyName": "items",
 				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "TabContainer_Rentals",
+				"values": {
+					"type": "crt.TabContainer",
+					"items": [],
+					"caption": "#ResourceString(TabContainer_Rentals_caption)#",
+					"iconPosition": "only-text",
+					"visible": true
+				},
+				"parentName": "Tabs",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "GridContainer_4ysx4zh",
+				"values": {
+					"type": "crt.GridContainer",
+					"items": [],
+					"rows": "minmax(32px, max-content)",
+					"columns": [
+						"minmax(32px, 1fr)",
+						"minmax(32px, 1fr)"
+					],
+					"gap": {
+						"columnGap": "large",
+						"rowGap": 0
+					}
+				},
+				"parentName": "TabContainer_Rentals",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "ExpansionPanel_YachtRentals",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"colSpan": 2,
+						"row": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.ExpansionPanel",
+					"tools": [],
+					"items": [],
+					"title": "#ResourceString(ExpansionPanel_YachtRentals_title)#",
+					"toggleType": "default",
+					"togglePosition": "before",
+					"expanded": true,
+					"labelColor": "auto",
+					"fullWidthHeader": false,
+					"titleWidth": 20,
+					"padding": {
+						"top": "small",
+						"bottom": "small",
+						"left": "none",
+						"right": "none"
+					},
+					"fitContent": true,
+					"visible": true,
+					"alignItems": "stretch"
+				},
+				"parentName": "GridContainer_4ysx4zh",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridContainer_jv0i3bs",
+				"values": {
+					"type": "crt.GridContainer",
+					"rows": "minmax(max-content, 24px)",
+					"columns": [
+						"minmax(32px, 1fr)"
+					],
+					"gap": {
+						"columnGap": "large",
+						"rowGap": 0
+					},
+					"styles": {
+						"overflow-x": "hidden"
+					},
+					"items": []
+				},
+				"parentName": "ExpansionPanel_YachtRentals",
+				"propertyName": "tools",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "FlexContainer_0y6eizi",
+				"values": {
+					"type": "crt.FlexContainer",
+					"direction": "row",
+					"gap": "none",
+					"alignItems": "center",
+					"items": [],
+					"layoutConfig": {
+						"colSpan": 1,
+						"column": 1,
+						"row": 1,
+						"rowSpan": 1
+					}
+				},
+				"parentName": "GridContainer_jv0i3bs",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetailAddBtn_mbsdbky",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(GridDetailAddBtn_mbsdbky_caption)#",
+					"icon": "add-button-icon",
+					"iconPosition": "only-icon",
+					"color": "default",
+					"size": "medium",
+					"clicked": {
+						"request": "crt.CreateRecordRequest",
+						"params": {
+							"entityName": "UsrYachtRentals",
+							"defaultValues": [
+								{
+									"attributeName": "UsrYachtLookup",
+									"value": "$Id"
+								}
+							]
+						}
+					},
+					"visible": true,
+					"clickMode": "default"
+				},
+				"parentName": "FlexContainer_0y6eizi",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetailRefreshBtn_hlv8nij",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(GridDetailRefreshBtn_hlv8nij_caption)#",
+					"icon": "reload-icon",
+					"iconPosition": "only-icon",
+					"color": "default",
+					"size": "medium",
+					"clicked": {
+						"request": "crt.LoadDataRequest",
+						"params": {
+							"config": {
+								"loadType": "reload"
+							},
+							"dataSourceName": "GridDetail_hf3mycpDS"
+						}
+					}
+				},
+				"parentName": "FlexContainer_0y6eizi",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetailSettingsBtn_fgh5bcb",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(GridDetailSettingsBtn_fgh5bcb_caption)#",
+					"icon": "actions-button-icon",
+					"iconPosition": "only-icon",
+					"color": "default",
+					"size": "medium",
+					"clickMode": "menu",
+					"menuItems": []
+				},
+				"parentName": "FlexContainer_0y6eizi",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetailExportDataBtn_avv90kx",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(GridDetailExportDataBtn_avv90kx_caption)#",
+					"icon": "export-button-icon",
+					"color": "default",
+					"size": "medium",
+					"clicked": {
+						"request": "crt.ExportDataGridToExcelRequest",
+						"params": {
+							"viewName": "GridDetail_YachtRentals"
+						}
+					}
+				},
+				"parentName": "GridDetailSettingsBtn_fgh5bcb",
+				"propertyName": "menuItems",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetailImportDataBtn_9fxy958",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(GridDetailImportDataBtn_9fxy958_caption)#",
+					"icon": "import-button-icon",
+					"color": "default",
+					"size": "medium",
+					"clicked": {
+						"request": "crt.ImportDataRequest",
+						"params": {
+							"entitySchemaName": "UsrYachtRentals"
+						}
+					}
+				},
+				"parentName": "GridDetailSettingsBtn_fgh5bcb",
+				"propertyName": "menuItems",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetailSearchFilter_t7yihnk",
+				"values": {
+					"type": "crt.SearchFilter",
+					"placeholder": "#ResourceString(GridDetailSearchFilter_t7yihnk_placeholder)#",
+					"iconOnly": true,
+					"_filterOptions": {
+						"expose": [],
+						"from": [
+							"GridDetailSearchFilter_t7yihnk_SearchValue",
+							"GridDetailSearchFilter_t7yihnk_FilteredColumnsGroups"
+						]
+					}
+				},
+				"parentName": "FlexContainer_0y6eizi",
+				"propertyName": "items",
+				"index": 3
+			},
+			{
+				"operation": "insert",
+				"name": "GridContainer_n6gbwu8",
+				"values": {
+					"type": "crt.GridContainer",
+					"rows": "minmax(max-content, 32px)",
+					"columns": [
+						"minmax(32px, 1fr)",
+						"minmax(32px, 1fr)"
+					],
+					"gap": {
+						"columnGap": "large",
+						"rowGap": null
+					},
+					"styles": {
+						"overflow-x": "hidden"
+					},
+					"items": [],
+					"visible": true,
+					"padding": {
+						"top": "none",
+						"right": "none",
+						"bottom": "none",
+						"left": "none"
+					},
+					"color": "transparent",
+					"borderRadius": "none",
+					"alignItems": "stretch"
+				},
+				"parentName": "ExpansionPanel_YachtRentals",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_YachtRentals",
+				"values": {
+					"type": "crt.DataGrid",
+					"layoutConfig": {
+						"colSpan": 2,
+						"column": 1,
+						"row": 1,
+						"rowSpan": 6
+					},
+					"features": {
+						"rows": {
+							"selection": {
+								"enable": true,
+								"multiple": true
+							}
+						},
+						"editable": {
+							"enable": false,
+							"itemsCreation": false,
+							"floatingEditPanel": false
+						}
+					},
+					"items": "$GridDetail_hf3mycp",
+					"activeRow": "$GridDetail_hf3mycp_ActiveRow",
+					"selectionState": "$GridDetail_hf3mycp_SelectionState",
+					"_selectionOptions": {
+						"attribute": "GridDetail_hf3mycp_SelectionState"
+					},
+					"primaryColumnName": "GridDetail_hf3mycpDS_Id",
+					"columns": [
+						{
+							"id": "c5cdd28b-bbc2-2233-bc44-b334694aa100",
+							"code": "GridDetail_hf3mycpDS_UsrName",
+							"caption": "#ResourceString(GridDetail_hf3mycpDS_UsrName)#",
+							"dataValueType": 28
+						},
+						{
+							"id": "0c696557-4394-96d9-3f99-d1059e9f6fa6",
+							"code": "GridDetail_hf3mycpDS_UsrRentalStart",
+							"caption": "#ResourceString(GridDetail_hf3mycpDS_UsrRentalStart)#",
+							"dataValueType": 7
+						},
+						{
+							"id": "a6f9cf14-4f62-fedb-21eb-3c4a925bd90c",
+							"code": "GridDetail_hf3mycpDS_UsrRentalEnd",
+							"caption": "#ResourceString(GridDetail_hf3mycpDS_UsrRentalEnd)#",
+							"dataValueType": 7
+						},
+						{
+							"id": "2815402d-46ff-c3c5-1994-9cecbacc463d",
+							"code": "GridDetail_hf3mycpDS_UsrCustomer",
+							"caption": "#ResourceString(GridDetail_hf3mycpDS_UsrCustomer)#",
+							"dataValueType": 10
+						},
+						{
+							"id": "ed94e172-d4d4-5b4e-df21-079d6155ee63",
+							"code": "GridDetail_hf3mycpDS_UsrManager",
+							"caption": "#ResourceString(GridDetail_hf3mycpDS_UsrManager)#",
+							"dataValueType": 10
+						},
+						{
+							"id": "577f52ec-74b0-50d1-51b7-1de5ef0f9326",
+							"code": "GridDetail_hf3mycpDS_UsrTotalPrice",
+							"caption": "#ResourceString(GridDetail_hf3mycpDS_UsrTotalPrice)#",
+							"dataValueType": 4
+						},
+						{
+							"id": "3abad141-d934-9a2b-41d0-b49e61b94de1",
+							"code": "GridDetail_hf3mycpDS_UsrComment",
+							"caption": "#ResourceString(GridDetail_hf3mycpDS_UsrComment)#",
+							"dataValueType": 28
+						}
+					],
+					"placeholder": false,
+					"bulkActions": [],
+					"visible": true,
+					"fitContent": true,
+					"referenceSchema": "UsrYachtRentals"
+				},
+				"parentName": "GridContainer_n6gbwu8",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_hf3mycp_AddTagsBulkAction",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "Add tag",
+					"icon": "tag-icon",
+					"clicked": {
+						"request": "crt.AddTagsInRecordsRequest",
+						"params": {
+							"dataSourceName": "GridDetail_hf3mycpDS",
+							"filters": "$GridDetail_hf3mycp | crt.ToCollectionFilters : 'GridDetail_hf3mycp' : $GridDetail_hf3mycp_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_hf3mycp_SelectionState"
+						}
+					},
+					"items": []
+				},
+				"parentName": "GridDetail_YachtRentals",
+				"propertyName": "bulkActions",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_hf3mycp_RemoveTagsBulkAction",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "Remove tag",
+					"icon": "delete-button-icon",
+					"clicked": {
+						"request": "crt.RemoveTagsInRecordsRequest",
+						"params": {
+							"dataSourceName": "GridDetail_hf3mycpDS",
+							"filters": "$GridDetail_hf3mycp | crt.ToCollectionFilters : 'GridDetail_hf3mycp' : $GridDetail_hf3mycp_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_hf3mycp_SelectionState"
+						}
+					}
+				},
+				"parentName": "GridDetail_hf3mycp_AddTagsBulkAction",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_hf3mycp_ExportToExcelBulkAction",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "Export to Excel",
+					"icon": "export-button-icon",
+					"clicked": {
+						"request": "crt.ExportDataGridToExcelRequest",
+						"params": {
+							"viewName": "GridDetail_YachtRentals",
+							"filters": "$GridDetail_hf3mycp | crt.ToCollectionFilters : 'GridDetail_hf3mycp' : $GridDetail_hf3mycp_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_hf3mycp_SelectionState"
+						}
+					}
+				},
+				"parentName": "GridDetail_YachtRentals",
+				"propertyName": "bulkActions",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_hf3mycp_MergeBulkAction",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "Merge",
+					"icon": "merge-icon",
+					"clicked": {
+						"request": "crt.MergeRecordsRequest",
+						"params": {
+							"dataSourceName": "GridDetail_hf3mycpDS",
+							"selectionState": "$GridDetail_hf3mycp_SelectionState"
+						}
+					}
+				},
+				"parentName": "GridDetail_YachtRentals",
+				"propertyName": "bulkActions",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_hf3mycp_DeleteBulkAction",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "Delete",
+					"icon": "delete-button-icon",
+					"clicked": {
+						"request": "crt.DeleteRecordsRequest",
+						"params": {
+							"dataSourceName": "GridDetail_hf3mycpDS",
+							"filters": "$GridDetail_hf3mycp | crt.ToCollectionFilters : 'GridDetail_hf3mycp' : $GridDetail_hf3mycp_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_hf3mycp_SelectionState"
+						}
+					}
+				},
+				"parentName": "GridDetail_YachtRentals",
+				"propertyName": "bulkActions",
+				"index": 3
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
@@ -532,8 +1012,16 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_
 									"settingCode": "UsrYachtMinPrice",
 									"message": "#ResourceString(PriceCannotBeLess)#"
 								}
-							}
+							},
+							"MaxPriceValidator": {
+						        "type": "usr.MaxValueValidator",
+						        "params": {
+						            "settingCode": "UsrYachtMaxPrice",
+						            "message": "#ResourceString(PriceCannotBeMore)#"
+						        }
+						    }	
 						}
+						
 					},
 					"PDS_UsrImage_m289qyq": {
 						"modelConfig": {
@@ -550,6 +1038,13 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_
 								"params": {
 									"settingCode": "UsrYachtMinLength",
 									"message": "#ResourceString(LengthCannotBeLess)#"
+								}
+							},
+							"MaxLengthValidator": {
+								"type": "usr.MaxValueValidator",
+								"params": {
+									"settingCode": "UsrYachtMaxLength",
+									"message": "#ResourceString(LengthCannotBeMore)#"
 								}
 							}
 						}
@@ -663,6 +1158,57 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_
 						"modelConfig": {
 							"path": "PDS.UsrCaptainEmail_y4t9dmb"
 						}
+					},
+					"GridDetail_hf3mycp": {
+						"isCollection": true,
+						"modelConfig": {
+							"path": "GridDetail_hf3mycpDS",
+							"filterAttributes": []
+						},
+						"viewModelConfig": {
+							"attributes": {
+								"GridDetail_hf3mycpDS_UsrName": {
+									"modelConfig": {
+										"path": "GridDetail_hf3mycpDS.UsrName"
+									}
+								},
+								"GridDetail_hf3mycpDS_UsrRentalStart": {
+									"modelConfig": {
+										"path": "GridDetail_hf3mycpDS.UsrRentalStart"
+									}
+								},
+								"GridDetail_hf3mycpDS_UsrRentalEnd": {
+									"modelConfig": {
+										"path": "GridDetail_hf3mycpDS.UsrRentalEnd"
+									}
+								},
+								"GridDetail_hf3mycpDS_UsrCustomer": {
+									"modelConfig": {
+										"path": "GridDetail_hf3mycpDS.UsrCustomer"
+									}
+								},
+								"GridDetail_hf3mycpDS_UsrManager": {
+									"modelConfig": {
+										"path": "GridDetail_hf3mycpDS.UsrManager"
+									}
+								},
+								"GridDetail_hf3mycpDS_UsrTotalPrice": {
+									"modelConfig": {
+										"path": "GridDetail_hf3mycpDS.UsrTotalPrice"
+									}
+								},
+								"GridDetail_hf3mycpDS_UsrComment": {
+									"modelConfig": {
+										"path": "GridDetail_hf3mycpDS.UsrComment"
+									}
+								},
+								"GridDetail_hf3mycpDS_Id": {
+									"modelConfig": {
+										"path": "GridDetail_hf3mycpDS.Id"
+									}
+								}
+							}
+						}
 					}
 				}
 			},
@@ -683,7 +1229,15 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_
 				"operation": "merge",
 				"path": [],
 				"values": {
-					"primaryDataSourceName": "PDS"
+					"primaryDataSourceName": "PDS",
+					"dependencies": {
+						"GridDetail_hf3mycpDS": [
+							{
+								"attributePath": "UsrYachtLookup",
+								"relationPath": "PDS.Id"
+							}
+						]
+					}
 				}
 			},
 			{
@@ -708,6 +1262,36 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_
 							}
 						},
 						"scope": "page"
+					},
+					"GridDetail_hf3mycpDS": {
+						"type": "crt.EntityDataSource",
+						"scope": "viewElement",
+						"config": {
+							"entitySchemaName": "UsrYachtRentals",
+							"attributes": {
+								"UsrName": {
+									"path": "UsrName"
+								},
+								"UsrRentalStart": {
+									"path": "UsrRentalStart"
+								},
+								"UsrRentalEnd": {
+									"path": "UsrRentalEnd"
+								},
+								"UsrCustomer": {
+									"path": "UsrCustomer"
+								},
+								"UsrManager": {
+									"path": "UsrManager"
+								},
+								"UsrTotalPrice": {
+									"path": "UsrTotalPrice"
+								},
+								"UsrComment": {
+									"path": "UsrComment"
+								}
+							}
+						}
 					}
 				}
 			}
@@ -810,7 +1394,33 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_
                     }
                 ],
                 async: true
-            }
+            },
+
+			"usr.MaxValueValidator": {
+			    validator: function (config) {
+			        return async function (control) {
+			            let value = control.value;
+			            let setting = await new sdk.SysSettingsService().getByCode(config.settingCode);
+			            let maxValue = setting.value;
+				        let valueIsCorrect = value < maxValue;
+			            if (valueIsCorrect) {
+			                return null;
+			            }
+			            return {
+			                "usr.MaxValueValidator": { message: config.message }
+			            };
+			        };
+			    },
+			    params: [
+			        {
+						name: "settingCode"
+					},
+			        {
+						name: "message" 
+					}
+			    ],
+			    async: true
+			}
 		}/**SCHEMA_VALIDATORS*/
 	};
 });

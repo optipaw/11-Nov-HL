@@ -4,6 +4,7 @@
     "Name": "UsrAddYachtFromYachtLibrary",
     "ModifiedOnUtc": "\/Date(1795167498000)\/",
     "ManagerName": "ProcessSchemaManager",
-    "Caption": "Add yacht from Yacht service"
+    "Caption": "Add yacht from Yacht service",
+    "DependsOn": []
   }
 }

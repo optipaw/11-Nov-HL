@@ -12,6 +12,7 @@ namespace Terrasoft.Configuration
             base.OnSaving(sender, e);
             Entity yacht = (Entity)sender;
             decimal price = yacht.GetTypedColumnValue<decimal>("UsrPrice");
+			decimal length = yacht.GetTypedColumnValue<decimal>("UsrLength");
             if (price > 100000)
             {
                 e.IsCanceled = true;
@@ -33,6 +34,17 @@ namespace Terrasoft.Configuration
                 string message = string.Format(messageTemplate, "500 EUR");
                 throw new Exception(message);
             }
+
+			if (length >= 5000)
+		    {
+		        e.IsCanceled = true;
+				
+		        string messageTemplate = new LocalizableString(yacht.UserConnection.ResourceStorage,
+					
+		            "UsrYachtEvents", "LocalizableStrings.LengthIsTooBig.Value").ToString();
+		        string message = string.Format(messageTemplate, "5000 ft");
+                throw new Exception(message);
+		    }
         }
     }
 }

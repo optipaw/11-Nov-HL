@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "112508a2-457a-4d5f-aa9e-1120d24832e5",
     "Name": "UsrDriveType_Values",
-    "ModifiedOnUtc": "\/Date(1794830215000)\/",
+    "ModifiedOnUtc": "\/Date(1795185377000)\/",
     "InstallType": 0,
     "Schema": {
       "UId": "112508a2-457a-4d5f-aa9e-1120d24832e5",
@@ -43,6 +43,13 @@
         "IsKey": false,
         "ColumnName": "CreatedOn",
         "DataTypeValueUId": "d21e9ef4-c064-4012-b286-fa1a8171da44"
+      },
+      {
+        "ColumnUId": "e86949e7-1ee6-4277-8e20-982a9c673fdb",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "RecordInactive",
+        "DataTypeValueUId": "90b65bf8-0ffc-4141-8779-2420877af907"
       }
     ]
   }

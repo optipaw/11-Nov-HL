@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "cc0380c3-4149-46e7-80d5-65d88df745a8",
+    "Name": "UsrService_YachtLibrary",
+    "ModifiedOnUtc": "\/Date(1795165963000)\/",
+    "ManagerName": "ServiceSchemaManager",
+    "Caption": "Yacht library",
+    "DependsOn": []
+  }
+}

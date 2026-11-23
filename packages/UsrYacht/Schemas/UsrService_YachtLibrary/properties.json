@@ -1,0 +1,7 @@
+﻿{
+  "Properties": {
+    "BaseUri": "https://yachts-api.y-todosan.workers.dev",
+    "CreatedInVersion": "10.0.0.801",
+    "Type": "Rest"
+  }
+}
